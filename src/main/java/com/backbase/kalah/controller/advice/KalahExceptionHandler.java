@@ -33,6 +33,11 @@ public class KalahExceptionHandler {
         return createApiError(HttpStatus.BAD_REQUEST,ex);
     }
 
+    @ExceptionHandler(NotYourTurnException.class)
+    public ApiError handleNotYourTurnException(NotYourTurnException ex){
+        return createApiError(HttpStatus.PRECONDITION_FAILED,ex);
+    }
+
     @ExceptionHandler(Exception.class)
     public ApiError handleException(Exception ex){
         return createApiError(HttpStatus.INTERNAL_SERVER_ERROR,ex);
