@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class House implements Serializable {
+public class HouseDTO implements Serializable {
 
     private Integer stones;
 

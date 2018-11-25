@@ -3,12 +3,12 @@ package com.backbase.kalah.dto;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Data
-public class Game implements Serializable {
+public class PitDTO implements Serializable {
 
     private Long id;
-    private List<Player> players;
+    private Long pitId;
+    private Integer stones;
 
 }

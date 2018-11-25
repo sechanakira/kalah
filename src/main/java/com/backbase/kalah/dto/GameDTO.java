@@ -5,10 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class Pit implements Serializable {
+public class GameDTO implements Serializable {
 
     private Long id;
-    private Long pitId;
-    private Integer stones;
+    private String uri;
 
 }
