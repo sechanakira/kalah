@@ -1,8 +1,11 @@
 package com.backbase.kalah.persistence.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Data
 @Entity
 @Table(name = "pit")
 public class Pit implements Serializable {
@@ -16,27 +19,4 @@ public class Pit implements Serializable {
     @Column(name = "stones")
     private Integer stones;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getPitId() {
-        return pitId;
-    }
-
-    public void setPitId(Long pitId) {
-        this.pitId = pitId;
-    }
-
-    public Integer getStones() {
-        return stones;
-    }
-
-    public void setStones(Integer stones) {
-        this.stones = stones;
-    }
 }

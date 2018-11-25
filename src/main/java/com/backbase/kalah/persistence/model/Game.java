@@ -1,9 +1,12 @@
 package com.backbase.kalah.persistence.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "game")
 public class Game implements Serializable {
@@ -17,19 +20,4 @@ public class Game implements Serializable {
     @CollectionTable(name="game_players", joinColumns=@JoinColumn(name="game_id"))
     private List<Player> players;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
 }
