@@ -38,13 +38,17 @@ public class KalahExceptionHandler {
         return createApiError(HttpStatus.PRECONDITION_FAILED,ex);
     }
 
+    @ExceptionHandler(GameDataCorruptedException.class)
+    public ApiError handleGameDataCorruptedException(GameDataCorruptedException ex){
+        return createApiError(HttpStatus.INTERNAL_SERVER_ERROR,ex);
+    }
+
     @ExceptionHandler(Exception.class)
     public ApiError handleException(Exception ex){
         return createApiError(HttpStatus.INTERNAL_SERVER_ERROR,ex);
     }
 
     private ApiError createApiError(HttpStatus httpStatus, Exception ex){
-        ApiError error = new ApiError(httpStatus,ex);
-        return error;
+        return new ApiError(httpStatus,ex);
     }
 }
