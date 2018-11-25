@@ -16,6 +16,10 @@ public class Player implements Serializable {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "player_id")
+    private Long playerId;
+    @Column(name = "name")
+    private String name;
     @ElementCollection
     @Column(name = "pits")
     @CollectionTable(name="player_pits", joinColumns=@JoinColumn(name="player_pit_id"))
