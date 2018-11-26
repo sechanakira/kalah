@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PitRepository extends JpaRepository<Pit, Long> {
+    Pit findByPitId(Long pitId);
 }
