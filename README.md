@@ -37,3 +37,8 @@ Changing Context Path:
 
 The default context path is ''. To set a context path, set the following property in application.properties:
 server.servlet.context-path=YOUR_CONTEXT_PATH
+
+Changing Database:
+
+To change the database from H2, add your database driver dependency and the relevant Spring Boot Starter dependency to your pom and set the relevant properties in application.properties.
+
