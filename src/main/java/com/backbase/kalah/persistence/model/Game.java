@@ -19,6 +19,10 @@ public class Game implements Serializable {
     private boolean gameWon;
     @Column(name = "winner")
     private String winner;
+    @Column(name = "player_1_plays_next")
+    private Boolean player1PlaysNext;
+    @Column(name = "player_2_plays_next")
+    private Boolean player2PlaysNext;
     @ElementCollection
     @Column(name = "players")
     @CollectionTable(name="game_players", joinColumns=@JoinColumn(name="game_id"))

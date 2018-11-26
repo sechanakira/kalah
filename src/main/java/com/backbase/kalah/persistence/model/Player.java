@@ -24,7 +24,5 @@ public class Player implements Serializable {
     @Column(name = "pits")
     @CollectionTable(name="player_pits", joinColumns=@JoinColumn(name="player_pit_id"))
     private List<Pit> pits = new ArrayList<>();
-    @Embedded
-    private House house;
 
 }
